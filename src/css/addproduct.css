@@ -1,0 +1,69 @@
+.form-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-color: transparent;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form-container form img {
+  height: 20rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+}
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.form-container label input,
+.form-container label textarea,
+.form-container label select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-container label input[type=file] {
+  display: none;
+}
+.form-container img {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.add_product_paren {
+  margin-top: 15rem;
+}
+
+.add_product_child label {
+  background-color: white;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 0 1rem;
+}
+.add_product_child label.primary-btn {
+  width: 50%;
+  margin: auto;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.add_product_child label input,
+.add_product_child label textarea,
+.add_product_child label select {
+  outline: none;
+  resize: none;
+  border: 2px solid white;
+}

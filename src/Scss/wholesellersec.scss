@@ -1,0 +1,68 @@
+@import "colors";
+@import "colors";
+.wholeseller__section__main {
+  color: $green-text;
+  min-height: 100vh;
+  display: flex;
+  .explaination__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    img {
+      width: 100%;
+      @media (max-width: 800px) {
+        width: 160%;
+      }
+    }
+  }
+}
+.wholeseller__section__child {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  h1 {
+    font-size: 5.1rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+    gap: 2rem;
+    p {
+      width: 30rem;
+      @media (max-width: 800px) {
+        width: 100%;
+        text-align: center;
+      }
+      text-align: start;
+    }
+    .button__farmer {
+      width: 65%;
+      @media (max-width: 800px) {
+        width: 100%;
+        justify-content: center;
+      }
+      display: flex;
+
+      button {
+        font-size: 1rem;
+        font-weight: 200;
+      }
+    }
+  }
+}

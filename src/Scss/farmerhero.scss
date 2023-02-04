@@ -1,0 +1,65 @@
+@import "colors";
+.farmer__section__main {
+  color: $skin-text;
+  min-height: 100vh;
+  display: flex;
+  .explaination__logos {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    img {
+      width: 65%;
+      @media (max-width: 800px) {
+        width: 160%;
+      }
+    }
+  }
+}
+.farmer__section__child {
+  display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+  }
+  justify-content: space-between;
+
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 2.7rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+    gap: 2rem;
+    p {
+      width: 30rem;
+      @media (max-width: 800px) {
+        width: 100%;
+        text-align: center;
+      }
+      text-align: start;
+    }
+    .button__farmer {
+      width: 60%;
+      display: flex;
+      @media (max-width: 800px) {
+        width: 100%;
+        justify-content: center;
+      }
+
+      button {
+        font-size: 1rem;
+        font-weight: 200;
+      }
+    }
+  }
+}

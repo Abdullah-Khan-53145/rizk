@@ -1,3 +1,4 @@
+@import "colors";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
@@ -11,34 +12,78 @@ li {
 a {
   text-decoration: none;
 }
-body {
+body,
+select,
+textarea {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 html {
-  scroll-behavior: smooth;
   font-size: 100%;
+  scroll-behavior: smooth;
 }
-body {
+.App {
   position: relative;
 }
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
 
-  width: 100%;
-}
 .child {
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 .main {
   width: 100%;
 }
 
+.primary-btn {
+  border-radius: 3rem;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 800;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  padding: 1.5rem 3rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  background: white;
+  padding: 1.5rem 3.5rem;
+
+  z-index: 0;
+}
+.primary-btn::after {
+  background-color: #202020;
+  border-radius: 3rem;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+.primary-btn:hover::after {
+  transform: translate(0, 0);
+}
+.primary-btn:hover {
+  color: #fff;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+.main_background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  transition: background 0.5s;
+}
 @media (max-width: 1890px) {
   html {
     font-size: 96.666666%;

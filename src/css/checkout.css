@@ -1,0 +1,386 @@
+.checkout__page__main {
+  width: 90%;
+  margin: 15rem auto;
+}
+
+.checkout__page__child {
+  display: block;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row-reverse;
+}
+@media (max-width: 500px) {
+  .checkout__page__child {
+    flex-direction: column-reverse;
+  }
+}
+
+.checkout__page__bill {
+  max-width: 35rem;
+  height: 100%;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.205);
+}
+@media (max-width: 500px) {
+  .checkout__page__bill {
+    max-width: 100rem;
+    width: 100%;
+  }
+}
+@media (max-width: 756px) {
+  .checkout__page__bill {
+    font-size: 2.5rem;
+  }
+}
+.checkout__page__bill h2 {
+  border-bottom: 1px solid lightgray;
+  padding: 1rem 0;
+  padding-bottom: 1rem;
+  width: 100%;
+  text-align: start;
+}
+@media (max-width: 756px) {
+  .checkout__page__bill h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.checkout__page__ordered__items {
+  padding: 1rem 0;
+  height: 25vh;
+  overflow-y: scroll;
+}
+.checkout__page__ordered__items::-webkit-scrollbar {
+  width: 5px;
+}
+.checkout__page__ordered__items::-webkit-scrollbar-track {
+  background-color: lightgray;
+}
+.checkout__page__ordered__items::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 85, 85);
+}
+
+.checkout__page__ordered__item {
+  display: flex;
+}
+.checkout__page__ordered__item .item__img {
+  width: 10rem;
+}
+.checkout__page__ordered__item .item__img img {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.checkout__page__ordered__item .item__info {
+  width: 100%;
+}
+.checkout__page__ordered__item .item__info h3 {
+  font-size: 1.2rem;
+  text-align: start;
+  width: 100%;
+}
+@media (max-width: 756px) {
+  .checkout__page__ordered__item .item__info h3 {
+    font-size: 2.5rem;
+  }
+}
+.checkout__page__ordered__item .item__size__color {
+  display: flex;
+  gap: 1rem;
+}
+.checkout__page__ordered__item .item_price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.checkout__page__ordered__item .item_price span {
+  color: black;
+  font-size: 1.3rem;
+}
+.checkout__page__ordered__item .item_price span:nth-child(1) {
+  font-size: 1.5rem;
+  color: black;
+}
+@media (max-width: 756px) {
+  .checkout__page__ordered__item .item_price span:nth-child(1) {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 756px) {
+  .checkout__page__ordered__item .item_price span {
+    font-size: 2rem;
+  }
+}
+
+.total_bill_calculations {
+  border-top: 1px solid lightgray;
+  width: 20%;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding: 1rem 0;
+  justify-content: space-between;
+}
+.total_bill_calculations .total_bill_amount_titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+@media (max-width: 756px) {
+  .total_bill_calculations .total_bill_amount_titles {
+    font-size: 2.5rem;
+  }
+}
+.total_bill_calculations .total_bill_amount_values {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.total_bill {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.total_bill h2:nth-child(2) {
+  text-align: end;
+}
+
+.costomer__details__form {
+  height: 100%;
+  flex: 1;
+}
+.costomer__details__form .form_slots {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.233);
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+.costomer__details__form h1 {
+  font-size: 3.5rem;
+}
+@media (max-width: 756px) {
+  .costomer__details__form {
+    width: 100%;
+  }
+}
+.costomer__details__form .common__cards {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 756px) {
+  .costomer__details__form .common__cards {
+    flex-direction: column;
+  }
+}
+.costomer__details__form .common__input {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 200;
+}
+.costomer__details__form .common__input label {
+  font-size: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.costomer__details__form .common__input input,
+.costomer__details__form .common__input .input {
+  font-size: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: white;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border: 1px solid white;
+  outline: none;
+}
+.costomer__details__form .common__input .input {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  padding-left: 5px;
+}
+.costomer__details__form .common__input .input input {
+  border: none;
+}
+.costomer__details__form .costomer__expire {
+  width: 20%;
+}
+@media (max-width: 756px) {
+  .costomer__details__form .costomer__expire {
+    width: 100%;
+  }
+}
+.costomer__details__form .costomer__expire .date__mm__yyyy {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+.costomer__details__form .costomer__expire .date__mm__yyyy .input {
+  width: 100%;
+  height: 100%;
+}
+.costomer__details__form .costomer__expire .date__mm__yyyy .input option {
+  color: black;
+}
+.costomer__details__form .costomer__expire .date__mm__yyyy .input option:nth-child(0) {
+  color: red;
+}
+.costomer__details__form .costomer__expire .date__mm__yyyy input {
+  width: 100%;
+}
+
+.costomer__phone {
+  width: 30%;
+}
+@media (max-width: 756px) {
+  .costomer__phone {
+    width: 100%;
+  }
+}
+
+.costomer__card .costomer__card_number {
+  width: 70%;
+}
+@media (max-width: 756px) {
+  .costomer__card .costomer__card_number {
+    width: 100%;
+  }
+}
+.costomer__card .costomer__CVC {
+  width: 15%;
+}
+@media (max-width: 756px) {
+  .costomer__card .costomer__CVC {
+    width: 100%;
+  }
+}
+
+.costomer__name .common__input {
+  width: 100%;
+}
+.costomer__name .costomer__phone {
+  width: 80%;
+}
+@media (max-width: 756px) {
+  .costomer__name .costomer__phone {
+    width: 100%;
+  }
+}
+
+.costomer__street_adress .costomer_adress_street {
+  width: 100%;
+}
+.costomer__street_adress .costomer_adress_city {
+  width: 25%;
+}
+@media (max-width: 756px) {
+  .costomer__street_adress .costomer_adress_city {
+    width: 100%;
+  }
+}
+
+.costomer__country_adress .costomer_adress_country,
+.costomer__country_adress .costomer_adress_state {
+  width: 100%;
+}
+.costomer__country_adress .costomer_adress_postal__code {
+  width: 20%;
+}
+@media (max-width: 756px) {
+  .costomer__country_adress .costomer_adress_postal__code {
+    width: 100%;
+  }
+}
+
+.costomer_adress_state select,
+.costomer_adress_country select {
+  font-size: 2rem;
+  padding: 1rem;
+  background: transparent;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background: white;
+  border: 1px solid white;
+  outline: none;
+}
+.costomer_adress_state select button,
+.costomer_adress_country select button {
+  background-color: black;
+}
+.costomer_adress_state select button:hover,
+.costomer_adress_country select button:hover {
+  color: white;
+}
+.costomer_adress_state select option,
+.costomer_adress_country select option {
+  color: black;
+}
+.costomer_adress_state select option:nth-child(1),
+.costomer_adress_country select option:nth-child(1) {
+  color: red;
+}
+
+.order__confrim__news {
+  justify-content: center;
+  align-items: center;
+}
+.order__confrim__news h1 {
+  font-size: 3rem;
+}
+.order__confrim__news h2 {
+  font-size: 2rem;
+}
+
+.order__confrim__news_child {
+  background-color: rgba(255, 255, 255, 0.247);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+.order__confrim__news_child .top_message {
+  border-bottom: 1px solid gray;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.order__confrim__news_child .top_message h2 {
+  font-weight: 200;
+}
+.order__confrim__news_child .top_message svg {
+  color: green;
+  background-color: white;
+  border-radius: 50%;
+  width: 4rem;
+}
+.order__confrim__news_child .order_info_row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.order__confrim__news_child .order_info_row .name,
+.order__confrim__news_child .order_info_row .adress {
+  text-align: end;
+}
+.order__confrim__news_child .order_info_row div {
+  width: 50%;
+}

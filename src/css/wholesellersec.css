@@ -1,0 +1,75 @@
+.wholeseller__section__main {
+  color: #1d2909;
+  min-height: 100vh;
+  display: flex;
+}
+.wholeseller__section__main .explaination__logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.wholeseller__section__main .explaination__logos img {
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .wholeseller__section__main .explaination__logos img {
+    width: 160%;
+  }
+}
+
+.wholeseller__section__child {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .wholeseller__section__child {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+.wholeseller__section__child h1 {
+  font-size: 5.1rem;
+}
+.wholeseller__section__child h2 {
+  font-size: 2.2rem;
+}
+.wholeseller__section__child .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  gap: 2rem;
+}
+@media (max-width: 800px) {
+  .wholeseller__section__child .info {
+    width: 100%;
+  }
+}
+.wholeseller__section__child .info p {
+  width: 30rem;
+  text-align: start;
+}
+@media (max-width: 800px) {
+  .wholeseller__section__child .info p {
+    width: 100%;
+    text-align: center;
+  }
+}
+.wholeseller__section__child .info .button__farmer {
+  width: 65%;
+  display: flex;
+}
+@media (max-width: 800px) {
+  .wholeseller__section__child .info .button__farmer {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.wholeseller__section__child .info .button__farmer button {
+  font-size: 1rem;
+  font-weight: 200;
+}

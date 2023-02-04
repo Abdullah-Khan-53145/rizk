@@ -1,0 +1,168 @@
+.back_to_home {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.login_container_parent {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+  width: 100%;
+}
+
+.login_container_parent > img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.back_to_home svg {
+  height: 40px;
+  width: 40px;
+}
+
+.back_to_home > span {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.Login {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__container {
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  flex-direction: column;
+  max-width: 50rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.login__container h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.login__container h2 {
+  font-weight: 100;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.login__container button {
+  justify-content: space-between;
+  display: flex;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  border: none;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user__info__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.info__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.input__main {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+}
+.input__main svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.info__container input {
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  margin: 5px 0px;
+  flex-grow: 1;
+}
+
+.info__container label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.signup__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup__container span {
+  width: 100%;
+  text-align: center;
+}
+
+.signup__container small {
+  color: white;
+}
+
+.signup__container span a {
+  cursor: pointer;
+}
+
+.signup__container span a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .login_container_parent {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 756px) {
+  .login_container_parent > img {
+    display: none;
+  }
+}
+.google {
+  font-size: 1rem;
+}
+.google svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}

@@ -1,0 +1,357 @@
+@import "colors";
+.checkout__page__main {
+  width: 90%;
+  margin: 15rem auto;
+}
+.checkout__page__child {
+  display: block;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row-reverse;
+  @media (max-width: 500px) {
+    flex-direction: column-reverse;
+  }
+}
+.checkout__page__bill {
+  max-width: 35rem;
+  height: 100%;
+  @media (max-width: 500px) {
+    max-width: 100rem;
+    width: 100%;
+  }
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.205);
+
+  @media (max-width: 756px) {
+    font-size: 2.5rem;
+  }
+  h2 {
+    border-bottom: 1px solid lightgray;
+    padding: 1rem 0;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: start;
+
+    @media (max-width: 756px) {
+      font-size: 2.5rem;
+    }
+  }
+}
+.checkout__page__ordered__items {
+  padding: 1rem 0;
+  height: 25vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: lightgray;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(85, 85, 85);
+  }
+}
+
+.checkout__page__ordered__item {
+  display: flex;
+  .item__img {
+    width: 10rem;
+    img {
+      padding: 0.5rem;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .item__info {
+    width: 100%;
+    h3 {
+      font-size: 1.2rem;
+      text-align: start;
+      width: 100%;
+      @media (max-width: 756px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .item__size__color {
+    display: flex;
+    gap: 1rem;
+  }
+  .item_price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    span {
+      &:nth-child(1) {
+        font-size: 1.5rem;
+        color: black;
+        @media (max-width: 756px) {
+          font-size: 2rem;
+        }
+      }
+      color: black;
+      font-size: 1.3rem;
+      @media (max-width: 756px) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.total_bill_calculations {
+  border-top: 1px solid lightgray;
+  width: 20%;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding: 1rem 0;
+  justify-content: space-between;
+  .total_bill_amount_titles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+    @media (max-width: 756px) {
+      font-size: 2.5rem;
+    }
+  }
+  .total_bill_amount_values {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.total_bill {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  h2 {
+    &:nth-child(2) {
+      text-align: end;
+    }
+  }
+}
+
+.costomer__details__form {
+  height: 100%;
+  .form_slots {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.233);
+    margin-bottom: 2rem;
+    padding: 2rem;
+  }
+  flex: 1;
+  h1 {
+    font-size: 3.5rem;
+  }
+  @media (max-width: 756px) {
+    width: 100%;
+  }
+
+  .common__cards {
+    display: flex;
+    @media (max-width: 756px) {
+      flex-direction: column;
+    }
+    gap: 2rem;
+  }
+
+  .common__input {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 200;
+    label {
+      font-size: 1.5rem;
+      width: fit-content;
+    }
+    input,
+    .input {
+      font-size: 2rem;
+      width: 100%;
+      padding: 1rem;
+      background: white;
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+
+      border: 1px solid white;
+      outline: none;
+    }
+
+    .input {
+      display: flex;
+      align-items: center;
+      padding: 0px;
+      padding-left: 5px;
+      input {
+        border: none;
+      }
+    }
+  }
+
+  .costomer__expire {
+    width: 20%;
+    @media (max-width: 756px) {
+      width: 100%;
+    }
+    .date__mm__yyyy {
+      height: 100%;
+      width: 100%;
+      .input {
+        width: 100%;
+        height: 100%;
+        option {
+          &:nth-child(0) {
+            color: red;
+          }
+          color: black;
+        }
+      }
+      align-items: center;
+      gap: 1rem;
+      display: flex;
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+.costomer__phone {
+  width: 30%;
+  @media (max-width: 756px) {
+    width: 100%;
+  }
+}
+
+.costomer__card {
+  .costomer__card_number {
+    width: 70%;
+    @media (max-width: 756px) {
+      width: 100%;
+    }
+  }
+  .costomer__CVC {
+    width: 15%;
+    @media (max-width: 756px) {
+      width: 100%;
+    }
+  }
+}
+.costomer__name {
+  .common__input {
+    width: 100%;
+  }
+  .costomer__phone {
+    width: 80%;
+    @media (max-width: 756px) {
+      width: 100%;
+    }
+  }
+}
+.costomer__street_adress {
+  .costomer_adress_street {
+    width: 100%;
+  }
+  .costomer_adress_city {
+    width: 25%;
+    @media (max-width: 756px) {
+      width: 100%;
+    }
+  }
+}
+.costomer__country_adress {
+  .costomer_adress_country,
+  .costomer_adress_state {
+    width: 100%;
+  }
+
+  .costomer_adress_postal__code {
+    width: 20%;
+    @media (max-width: 756px) {
+      width: 100%;
+    }
+  }
+}
+.costomer_adress_state,
+.costomer_adress_country {
+  select {
+    font-size: 2rem;
+    padding: 1rem;
+    background: transparent;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background: white;
+    border: 1px solid white;
+    outline: none;
+    button {
+      background-color: black;
+      &:hover {
+        color: white;
+      }
+    }
+    option {
+      &:nth-child(1) {
+        color: red;
+      }
+      color: black;
+    }
+  }
+}
+.order__confrim__news {
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+.order__confrim__news_child {
+  background-color: rgba(255, 255, 255, 0.247);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  .top_message {
+    border-bottom: 1px solid gray;
+    // border-bottom: 1px solid ;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    h2 {
+      font-weight: 200;
+    }
+    svg {
+      color: green;
+      background-color: white;
+      border-radius: 50%;
+      width: 4rem;
+    }
+  }
+  .order_info_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    .name,
+    .adress {
+      text-align: end;
+    }
+    div {
+      width: 50%;
+    }
+  }
+}

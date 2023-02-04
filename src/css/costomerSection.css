@@ -1,0 +1,84 @@
+.costomer__section__main {
+  color: #24203f;
+  min-height: 100vh;
+  background-color: #8f7dff;
+  display: flex;
+}
+
+.costomer__section__child {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .costomer__section__child {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+.costomer__section__child h1 {
+  font-size: 10rem;
+}
+@media (max-width: 800px) {
+  .costomer__section__child h1 {
+    font-size: 8rem;
+  }
+}
+.costomer__section__child h2 {
+  font-size: 4.5rem;
+}
+@media (max-width: 800px) {
+  .costomer__section__child h2 {
+    font-size: 3.5rem;
+  }
+}
+.costomer__section__child .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  gap: 2rem;
+}
+@media (max-width: 800px) {
+  .costomer__section__child .info {
+    align-items: center;
+    width: 100%;
+  }
+}
+.costomer__section__child .info p {
+  width: 27rem;
+  text-align: start;
+}
+@media (max-width: 800px) {
+  .costomer__section__child .info p {
+    width: 100%;
+    text-align: center;
+  }
+}
+.costomer__section__child .info button {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.explaination__logos {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.service__info {
+  padding: 1;
+}
+.service__info p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.service__info img {
+  width: 15rem;
+}
+@media (max-width: 800px) {
+  .service__info img {
+    width: 10rem;
+  }
+}

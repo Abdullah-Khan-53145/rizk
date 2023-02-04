@@ -1,25 +1,121 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./App.css";
+import Home from "./Pages/Home";
+import { connect } from "react-redux";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import UserPage from "./Pages/UserPage";
+import Addproduct from "./Pages/Addproduct";
+import Cart from "./Pages/Cart";
+import Checkout from "./Pages/Checkout";
+import ProductPage from "./Pages/ProductPage";
+function App({ color }) {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <>
+          <Header />
+          <Home />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/:role/log-in",
+      element: (
+        <>
+          <Login />
+        </>
+      ),
+    },
+    {
+      path: "/:role/sign-up",
+      element: (
+        <>
+          <Signup />
+        </>
+      ),
+    },
+    {
+      path: "/user/:role",
+      element: (
+        <>
+          <Header />
+          <UserPage />
+          <Footer style={{ color: "black" }} />
+        </>
+      ),
+    },
+    {
+      path: "/user/:role/add-product",
+      element: (
+        <>
+          <Header />
+          <Addproduct />
+          <Footer style={{ color: "black" }} />
+        </>
+      ),
+    },
+    {
+      path: "/user/farmer",
+      element: (
+        <>
+          <Header />
+          <Addproduct />
+          <Footer style={{ color: "black" }} />
+        </>
+      ),
+    },
+    {
+      path: ":role/cart",
+      element: (
+        <>
+          <Header />
+          <Cart />
+          <Footer style={{ color: "black" }} />
+        </>
+      ),
+    },
+    {
+      path: "/product/:role/:id",
+      element: (
+        <>
+          <Header />
+          <ProductPage />
+          <Footer style={{ color: "black" }} />
+        </>
+      ),
+    },
+    {
+      path: ":role/checkout",
+      element: (
+        <>
+          <Header />
+          <Checkout />
+          <Footer style={{ color: "black" }} />
+        </>
+      ),
+    },
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div
+        className="main_background"
+        style={{
+          backgroundColor: `${color.colors[color.index]}`,
+        }}
+      ></div>
+      <RouterProvider router={router} />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  color: state.colorState,
+});
+const dispatchStateToProps = (dispatch) => ({});
+
+export default connect(mapStateToProps, dispatchStateToProps)(App);
