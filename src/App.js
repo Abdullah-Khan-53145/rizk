@@ -6,13 +6,15 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import UserPage from "./Pages/AllBlogPage";
+import UserPage from "./Pages/UserPage";
 import Addproduct from "./Pages/Addproduct";
 import BlogPage from "./Pages/BlogPage";
 import Cart from "./Pages/Cart";
 import Checkout from "./Pages/Checkout";
+import Contact from "./Pages/Contact";
 import ProductPage from "./Pages/ProductPage";
 import Categories from "./Components/Categories";
+import About from "./Pages/About";
 function App({ color }) {
   const router = createBrowserRouter([
     {
@@ -26,22 +28,7 @@ function App({ color }) {
         </>
       ),
     },
-    {
-      path: "/:role/log-in",
-      element: (
-        <>
-          <Login />
-        </>
-      ),
-    },
-    {
-      path: "/:role/sign-up",
-      element: (
-        <>
-          <Signup />
-        </>
-      ),
-    },
+
     {
       path: "/all-blogs",
       element: (
@@ -62,26 +49,7 @@ function App({ color }) {
         </>
       ),
     },
-    {
-      path: "/user/farmer",
-      element: (
-        <>
-          <Header />
-          <Addproduct />
-          <Footer style={{ color: "black" }} />
-        </>
-      ),
-    },
-    {
-      path: ":role/cart",
-      element: (
-        <>
-          <Header />
-          <Cart />
-          <Footer style={{ color: "black" }} />
-        </>
-      ),
-    },
+
     {
       path: "/product/:role/:id",
       element: (
@@ -93,11 +61,21 @@ function App({ color }) {
       ),
     },
     {
-      path: ":role/checkout",
+      path: "/contact",
       element: (
         <>
           <Header />
-          <Checkout />
+          <Contact />
+          <Footer style={{ color: "black" }} />
+        </>
+      ),
+    },
+    {
+      path: "/about",
+      element: (
+        <>
+          <Header />
+          <About />
           <Footer style={{ color: "black" }} />
         </>
       ),

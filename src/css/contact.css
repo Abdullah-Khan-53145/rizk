@@ -1,0 +1,169 @@
+.contact_body {
+  background-color: rgba(255, 255, 255, 0.418);
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+@media (max-width: 800px) {
+  .contact_body {
+    padding: 10rem 1rem;
+  }
+}
+
+.contact_card {
+  background-color: #c0caff;
+  border-radius: 1rem;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media (max-width: 800px) {
+  .contact_card {
+    flex-direction: column-reverse;
+  }
+}
+.contact_card * {
+  text-align: left;
+}
+.contact_card .contact_text_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 40%;
+}
+@media (max-width: 800px) {
+  .contact_card .contact_text_info {
+    max-width: 100%;
+  }
+}
+.contact_card .contact_text_info h2 {
+  font-size: 3rem;
+}
+.contact_card .contact_text_info p {
+  font-size: 1.5rem;
+}
+.contact_card .contact_text_info .info_card_contact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.contact_card .contact_text_info .info_card_contact span {
+  font-size: 1.5rem;
+}
+.contact_card .contact_text_info .info_card_contact svg {
+  width: 2rem;
+}
+.contact_card .contact_text_info .rigth {
+  justify-content: flex-start;
+}
+.contact_card form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.contact_card form .input_card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact_card form .input_card label {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.contact_card form .input_card input,
+.contact_card form .input_card textarea {
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.contact_card form .input_card textarea {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  resize: none;
+  width: 100%;
+}
+.contact_card form .submit_button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact_faqs {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 3rem;
+  padding: 5rem;
+  gap: 5rem;
+}
+@media (max-width: 800px) {
+  .contact_faqs {
+    flex-direction: column;
+  }
+  .contact_faqs .heading {
+    width: 100%;
+  }
+}
+.contact_faqs h1 {
+  font-size: 4rem;
+  text-align: start;
+}
+.contact_faqs * {
+  text-align: start;
+}
+.contact_faqs .questions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact_faqs .questions p {
+  font-size: 1.5rem;
+}
+.contact_faqs .questions .question_card {
+  display: flex;
+  flex-direction: column;
+}
+.contact_faqs .questions .question_card .question {
+  padding: 1.5rem 0;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+.contact_faqs .questions .question_card .question svg {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.contact_faqs .questions .question_card .answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+.contact_faqs .questions .question_card .answer p {
+  font-size: 1.2rem;
+  width: 100%;
+  font-weight: 600;
+  margin-top: -1.5rem;
+}
+@media (max-width: 400px) {
+  .contact_faqs .questions .question_card .answer p {
+    font-size: 1rem;
+  }
+}
+.contact_faqs .questions .question_card:nth-child(1) {
+  border-bottom: 1px solid gray;
+}
+.contact_faqs .questions .question_card:nth-child(2) {
+  border-bottom: 1px solid gray;
+}

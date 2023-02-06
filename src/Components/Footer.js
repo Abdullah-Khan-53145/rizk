@@ -1,7 +1,9 @@
 import React from "react";
 import "../css/footer.css";
+import { useNavigate } from "react-router-dom";
 import Fade from "react-reveal";
 function Footer() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="footer__section__main" id="about">
@@ -27,7 +29,12 @@ function Footer() {
                 delectus autem quasi similique officiis!
               </p>
               <div className="button__farmer">
-                <button className="primary-btn">CONTACT US</button>
+                <button
+                  onClick={() => navigate("/about")}
+                  className="primary-btn"
+                >
+                  READ MORE
+                </button>
               </div>
             </div>
           </Fade>

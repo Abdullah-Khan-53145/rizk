@@ -85,9 +85,9 @@ function Header({ color, setColor }) {
       setColor(4); //set the color
     } else if (location.pathname === "/blog/3") {
       setColor(5); //set the color
-    } else if (location.pathname === "/about-us") {
+    } else if (location.pathname === "/about") {
       setColor(3); //set the color
-    } else if (location.pathname === "/contact-us") {
+    } else if (location.pathname === "/contact") {
       setColor(1); //set the color
     }
     return () => window.removeEventListener("scroll", animateHeaderHome);
@@ -116,11 +116,9 @@ function Header({ color, setColor }) {
               </Link>
             </li>
             <li>
-              <a href="#about" style={{ color: "black" }}>
-                <Link to="" style={{ color: "black" }}>
-                  About
-                </Link>
-              </a>
+              <Link to="/contact" style={{ color: "black" }}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
