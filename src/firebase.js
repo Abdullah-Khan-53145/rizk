@@ -4,13 +4,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDyFmutBlnD70fVrxhzeD02JJscs8cfkXc",
-  authDomain: "agri-zone-2bf63.firebaseapp.com",
-  projectId: "agri-zone-2bf63",
-  storageBucket: "agri-zone-2bf63.appspot.com",
-  messagingSenderId: "228253394460",
-  appId: "1:228253394460:web:1359204ef76cc524cc61d9",
-  measurementId: "G-LVC40KLN7L",
+  apiKey: "AIzaSyDvTB_dkhBgbmxIxjlMBgq7cR2GnIkACAk",
+  authDomain: "rizk-f6e3f.firebaseapp.com",
+  projectId: "rizk-f6e3f",
+  storageBucket: "rizk-f6e3f.appspot.com",
+  messagingSenderId: "33854154011",
+  appId: "1:33854154011:web:3f87627638fa99e3259fbe",
+  measurementId: "G-258SL712EF",
 };
 
 // Initialize Firebase

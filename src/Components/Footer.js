@@ -15,14 +15,16 @@ function Footer() {
             <div className="info">
               <div className="heading">
                 <h1>About</h1>
-                <h2>Agri-Zone</h2>
+                <h2>This, Site.</h2>
               </div>
               <p>
-                We are a platform that connects farmers who produce high-quality
-                goods with wholesalers who resell them to customers. Our mission
-                is to provide fresher, more responsibly-sourced products by
-                cutting out middlemen and providing a direct link between
-                producers and consumers.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                dolor eum rem laudantium ipsum unde aspernatur ipsam quas,
+                veniam repellat numquam placeat? Repellat minus quae quo iure,
+                sapiente repellendus reprehenderit. Sunt, quod ex. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Quas eos
+                perferendis quos laborum, dolorem, vel accusantium omnis
+                delectus autem quasi similique officiis!
               </p>
               <div className="button__farmer">
                 <button className="primary-btn">CONTACT US</button>

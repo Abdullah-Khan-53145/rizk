@@ -1,73 +1,80 @@
-.farmer__section__main {
+.blog__section__main {
   color: #3a231b;
   min-height: 100vh;
   display: flex;
 }
-.farmer__section__main .explaination__logos {
+.blog__section__main .explaination__logos {
   display: flex;
   justify-content: center;
-  width: 50%;
 }
-.farmer__section__main .explaination__logos img {
-  width: 65%;
-}
-@media (max-width: 800px) {
-  .farmer__section__main .explaination__logos img {
-    width: 160%;
-  }
+.blog__section__main .explaination__logos img {
+  width: 30rem;
 }
 
-.farmer__section__child {
+.blog__section__child {
   display: flex;
-  justify-content: space-between;
+  gap: 5rem;
+  justify-content: space-around;
 }
 @media (max-width: 800px) {
-  .farmer__section__child {
+  .blog__section__child {
     flex-direction: column;
-    gap: 5rem;
     align-items: center;
   }
 }
-.farmer__section__child h1 {
-  font-size: 7rem;
+.blog__section__child h1 {
+  font-size: 6rem;
+  text-align: left;
 }
-.farmer__section__child h2 {
-  font-size: 2.7rem;
+@media (max-width: 800px) {
+  .blog__section__child h1 {
+    text-align: center;
+  }
 }
-.farmer__section__child .info {
+.blog__section__child .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
   gap: 2rem;
 }
 @media (max-width: 800px) {
-  .farmer__section__child .info {
+  .blog__section__child .info {
     width: 100%;
   }
 }
-.farmer__section__child .info p {
-  width: 30rem;
+.blog__section__child .info p {
+  width: 33rem;
+  font-size: 1.5rem;
   text-align: start;
 }
 @media (max-width: 800px) {
-  .farmer__section__child .info p {
+  .blog__section__child .info p {
     width: 100%;
     text-align: center;
   }
 }
-.farmer__section__child .info .button__farmer {
-  width: 60%;
+.blog__section__child .info .button__farmer {
+  width: 100%;
   display: flex;
 }
 @media (max-width: 800px) {
-  .farmer__section__child .info .button__farmer {
+  .blog__section__child .info .button__farmer {
     width: 100%;
     justify-content: center;
   }
 }
-.farmer__section__child .info .button__farmer button {
+.blog__section__child .info .button__farmer button {
   font-size: 1rem;
   font-weight: 200;
+}
+
+#blog-1 .blog__section__child {
+  flex-direction: row-reverse;
+}
+@media (max-width: 800px) {
+  #blog-1 .blog__section__child {
+    flex-direction: column;
+    align-items: center;
+  }
 }

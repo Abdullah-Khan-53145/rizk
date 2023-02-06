@@ -1,0 +1,81 @@
+@import "colors";
+.costomer__section__main {
+  color: $purple-text;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  .background {
+    height: 500px;
+    position: absolute;
+    // background-color: #c0caff;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.costomer__section__child {
+  display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  justify-content: space-around;
+
+  h1 {
+    font-size: 7.5rem;
+    @media (max-width: 800px) {
+      font-size: 8rem;
+    }
+  }
+  h2 {
+    font-size: 4rem;
+    @media (max-width: 800px) {
+      font-size: 3.5rem;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    @media (max-width: 800px) {
+      align-items: center;
+      width: 100%;
+    }
+    gap: 2rem;
+    p {
+      width: 27rem;
+      font-size: 1.5rem;
+      @media (max-width: 800px) {
+        width: 100%;
+        text-align: center;
+      }
+      text-align: start;
+    }
+    button {
+      font-size: 1rem;
+      font-weight: 200;
+    }
+  }
+}
+.explaination__logos {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.service__info {
+  padding: 1;
+  p {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  img {
+    @media (max-width: 800px) {
+      width: 10rem;
+    }
+    width: 15rem;
+  }
+}

@@ -6,11 +6,13 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import UserPage from "./Pages/UserPage";
+import UserPage from "./Pages/AllBlogPage";
 import Addproduct from "./Pages/Addproduct";
+import BlogPage from "./Pages/BlogPage";
 import Cart from "./Pages/Cart";
 import Checkout from "./Pages/Checkout";
 import ProductPage from "./Pages/ProductPage";
+import Categories from "./Components/Categories";
 function App({ color }) {
   const router = createBrowserRouter([
     {
@@ -19,6 +21,7 @@ function App({ color }) {
         <>
           <Header />
           <Home />
+          <Categories />
           <Footer />
         </>
       ),
@@ -40,7 +43,7 @@ function App({ color }) {
       ),
     },
     {
-      path: "/user/:role",
+      path: "/all-blogs",
       element: (
         <>
           <Header />
@@ -50,11 +53,11 @@ function App({ color }) {
       ),
     },
     {
-      path: "/user/:role/add-product",
+      path: "/blog/:id",
       element: (
         <>
           <Header />
-          <Addproduct />
+          <BlogPage />
           <Footer style={{ color: "black" }} />
         </>
       ),

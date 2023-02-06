@@ -4,6 +4,7 @@
   gap: 1rem;
 }
 .product_parent .product__img {
+  height: 40rem;
   background-color: black;
 }
 .product_parent img {

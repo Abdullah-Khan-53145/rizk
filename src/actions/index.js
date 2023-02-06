@@ -23,7 +23,6 @@ export const setUser = (user) => ({
 
 // Set color API
 export const setColorAPI = (payload) => {
-  console.log(payload);
   return (dispatch) => {
     dispatch(setColor(payload));
   };
