@@ -3,12 +3,12 @@ import FarmerHero from "../Components/Blogs";
 import { connect } from "react-redux";
 import { setColorAPI } from "../actions";
 import Hero from "../Components/Hero";
-import WholeSellerSec from "../Components/WholeSellerSec";
 import Services from "../Components/Services";
 import Blogs from "../Components/Blogs";
 function Home({ setColor }) {
   useEffect(() => {
     setColor(0);
+    window.scrollTo(0, 0);
   }, []);
   const info = [
     {

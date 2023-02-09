@@ -151,6 +151,60 @@
 .comment {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    color: rgb(56, 56, 56);
+    &:hover {
+      color: black;
+    }
+    transition: 0.3s;
+    transform: rotate(360deg);
+  }
+}
+.cmt__reply {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: height 0.3s;
+  height: 2.5rem;
+  .cmt__reply__input {
+    display: flex;
+    margin-left: 2rem;
+    gap: 0.5rem;
+    width: 60%;
+    button {
+      width: 4rem;
+      border: none;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.411);
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s;
+      &:hover {
+        background-color: rgb(206, 206, 206);
+      }
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+    input {
+      outline: none;
+      padding: 0.5rem;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.411);
+      border: none;
+      border-radius: 0.5rem;
+      &:nth-child(1) {
+        width: 30%;
+      }
+    }
+  }
 }
 .comment span {
   width: fit-content;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Fade } from "react-reveal";
 import "../css/contact.css";
 function Contact() {
@@ -19,6 +19,9 @@ function Contact() {
       message,
     });
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="user__page__main main">

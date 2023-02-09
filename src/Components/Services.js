@@ -27,7 +27,7 @@ function CostomerSection({ color, setColor }) {
               Dolorem laborum distinctio neque veniam assumenda corporis
               laudantium quod doloremque sunt a.
             </p>
-            <Link to="/" className="primary-btn">
+            <Link to="/about" className="primary-btn">
               Learn more
             </Link>
           </div>

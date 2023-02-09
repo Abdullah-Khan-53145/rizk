@@ -2,17 +2,11 @@ import "./App.css";
 import Home from "./Pages/Home";
 import { connect } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "./Pages/Login";
-import Signup from "./Pages/Signup";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import UserPage from "./Pages/UserPage";
-import Addproduct from "./Pages/Addproduct";
+import AllBlogsPage from "./Pages/AllBlogsPage";
 import BlogPage from "./Pages/BlogPage";
-import Cart from "./Pages/Cart";
-import Checkout from "./Pages/Checkout";
 import Contact from "./Pages/Contact";
-import ProductPage from "./Pages/ProductPage";
 import Categories from "./Components/Categories";
 import About from "./Pages/About";
 function App({ color }) {
@@ -34,7 +28,7 @@ function App({ color }) {
       element: (
         <>
           <Header />
-          <UserPage />
+          <AllBlogsPage />
           <Footer style={{ color: "black" }} />
         </>
       ),
@@ -50,16 +44,6 @@ function App({ color }) {
       ),
     },
 
-    {
-      path: "/product/:role/:id",
-      element: (
-        <>
-          <Header />
-          <ProductPage />
-          <Footer style={{ color: "black" }} />
-        </>
-      ),
-    },
     {
       path: "/contact",
       element: (

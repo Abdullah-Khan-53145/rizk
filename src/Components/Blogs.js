@@ -29,7 +29,7 @@ function FarmerHero({ title_head, title, description, img, id }) {
             </div>
             <p>{description}</p>
             <div className="button__farmer">
-              <Link to="/" className="primary-btn">
+              <Link to={`/blog/${id}`} className="primary-btn">
                 Learn more
               </Link>
             </div>

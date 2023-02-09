@@ -4,7 +4,11 @@ import "../css/product.css";
 function Product({ title, subTitle, img, price, description, id }) {
   const colors = ["#FF9F7D", "#CEFF7D", "#FFD37D", "#7DD8FF"];
   return (
-    <div className="product_parent">
+    <Link
+      to={`/blog/${id}`}
+      style={{ color: "black" }}
+      className="product_parent"
+    >
       <div className="product__img">
         <img src={img} style={{ background: colors[id] }} />
       </div>
@@ -36,7 +40,7 @@ function Product({ title, subTitle, img, price, description, id }) {
           </Link>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

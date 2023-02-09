@@ -18,6 +18,7 @@ import { Fade } from "react-reveal";
 import { connect } from "react-redux";
 import "../css/blog.css";
 import BlogCard from "../Components/BlogCard";
+import Reply from "../Components/Reply";
 const blogs = require("./blogs.json");
 const Post = () => {
   const { id } = useParams();
@@ -29,6 +30,7 @@ const Post = () => {
   const [email, setEmail] = useState("");
   const [cmt, setCmt] = useState("");
   const [cmts, setCmts] = useState([]);
+  const [reply, setReply] = useState(-1);
   const colors = ["#FF9F7D", "#CEFF7D", "#FFD37D", "#7DD8FF"];
   const addComment = async () => {
     setLoadingCmt(true);
@@ -90,12 +92,12 @@ const Post = () => {
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const comments = [];
       querySnapshot.forEach((doc) => {
-        comments.push(doc.data());
-        console.log(doc.data());
+        comments.push({ ...doc.data(), id: doc.id });
       });
       setCmts(comments);
     });
   };
+
   useEffect(() => {
     window.scrollTo(0, 0);
     setLoading(true);
@@ -153,12 +155,41 @@ const Post = () => {
                     <h2>Comments</h2>
                     {cmts.length !== 0 ? (
                       cmts.map((cmt, index) => (
-                        <div className="comment" key={index}>
-                          <span className="primary">
-                            <b>{cmt.name.split(" ")[0]}</b>
-                          </span>
-                          <span className="primary">{cmt.comment}</span>
-                        </div>
+                        <>
+                          <div className="comment" key={index}>
+                            <span className="primary">
+                              <b>{cmt.name.split(" ")[0]}</b>
+                            </span>
+                            <span className="primary">
+                              {cmt.comment} <br />
+                            </span>
+                            <svg
+                              onClick={() => {
+                                reply === index
+                                  ? setReply(-1)
+                                  : setReply(index);
+                              }}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={1.5}
+                              stroke="currentColor"
+                              className="w-6 h-6"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+                              />
+                            </svg>
+                          </div>
+                          <Reply
+                            reply={reply}
+                            id={id}
+                            Cmtid={cmt.id}
+                            index={index}
+                          />
+                        </>
                       ))
                     ) : (
                       <h3>🤐No comments found</h3>

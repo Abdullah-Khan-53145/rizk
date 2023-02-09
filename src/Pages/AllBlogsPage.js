@@ -13,6 +13,7 @@ function UserPage() {
   const filters = ["filter1", "filter2", "filter3", "filter4"];
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setProducts(blogposts.blogs);
   }, []);
   return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/about.css";
 import { Fade } from "react-reveal";
 function About() {
@@ -8,6 +8,9 @@ function About() {
     "lorem, ipsum",
     "lorem, ipsum",
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="user__page__main main">
