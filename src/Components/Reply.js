@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../css/blog.css";
 import {
   doc,
@@ -13,7 +14,8 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 
-function Reply({ id, reply, index, Cmtid }) {
+function Reply({ id, reply, index, Cmtid, setReply }) {
+  const location = useLocation();
   const [cmts, setCmts] = useState([]);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
@@ -44,6 +46,7 @@ function Reply({ id, reply, index, Cmtid }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setReply(-1);
     addComment();
     console.log({
       name,
@@ -52,11 +55,11 @@ function Reply({ id, reply, index, Cmtid }) {
   };
   useEffect(() => {
     getComment();
-    console.log(Cmtid);
   }, []);
   useEffect(() => {
-    console.log(cmts);
-  }, [cmts]);
+    getComment();
+  }, [location]);
+
   return (
     <>
       {cmts.length !== 0 &&

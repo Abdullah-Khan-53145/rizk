@@ -1,9 +1,19 @@
 import React from "react";
 import "../css/footer.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Fade from "react-reveal";
 function Footer() {
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
+  const handleClick = () => {
+    if (location.pathname === "/about") {
+      navigate("/contact");
+    } else {
+      navigate("/about");
+    }
+  };
+
   return (
     <>
       <div className="footer__section__main" id="about">
@@ -15,9 +25,16 @@ function Footer() {
           </Fade>
           <Fade bottom>
             <div className="info">
-              <div className="heading">
-                <h1>About</h1>
-                <h2>This, Site.</h2>
+              <div
+                className={`heading ${
+                  location.pathname === "/about" ? "__about" : ""
+                }`}
+              >
+                <h1> {location.pathname === "/about" ? "Our" : "About"}</h1>
+                <h2>
+                  {location.pathname === "/about" ? "Mission" : "This, Site."}
+                </h2>
+                <h2></h2>
               </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
@@ -29,11 +46,8 @@ function Footer() {
                 delectus autem quasi similique officiis!
               </p>
               <div className="button__farmer">
-                <button
-                  onClick={() => navigate("/about")}
-                  className="primary-btn"
-                >
-                  READ MORE
+                <button onClick={handleClick} className="primary-btn">
+                  {location.pathname === "/about" ? "CONTACT US" : "READ MORE"}
                 </button>
               </div>
             </div>

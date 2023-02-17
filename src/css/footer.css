@@ -37,7 +37,6 @@
 }
 .footer__section__child .info {
   display: flex;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   flex-direction: column;
@@ -79,4 +78,8 @@
 
 .copyright {
   font-size: 0.8em;
+}
+
+.__about h1 {
+  font-size: 13.5rem;
 }

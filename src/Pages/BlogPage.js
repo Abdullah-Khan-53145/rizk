@@ -24,7 +24,6 @@ const Post = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState("");
   const [relatedBlogs, setRelatedBlogs] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [loadingCmt, setLoadingCmt] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -47,7 +46,6 @@ const Post = () => {
       commentObj
     );
     console.log("Document written with ID: ", id + 1);
-    setLoadingCmt(false);
   };
   const handleComment = (e) => {
     e.preventDefault();
@@ -100,11 +98,11 @@ const Post = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setLoading(true);
     getRelatedBlogs();
     getComment();
     getBlog();
   }, [id]);
+
   return (
     <>
       <Toaster
@@ -188,6 +186,7 @@ const Post = () => {
                             id={id}
                             Cmtid={cmt.id}
                             index={index}
+                            setReply={setReply}
                           />
                         </>
                       ))

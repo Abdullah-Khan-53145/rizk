@@ -61,7 +61,7 @@ const MySVG = () => {
                 Dolorem laborum distinctio neque veniam assumenda corporis
               </p>
               <a to="/farmer/log-in" className="primary-btn">
-                Learn more
+                Find Blog
               </a>
             </div>
           </div>
@@ -76,7 +76,7 @@ const MySVG = () => {
                 Dolorem laborum distinctio neque veniam assumenda corporis
               </p>
               <a to="/farmer/log-in" className="primary-btn">
-                Learn more
+                Find Blog
               </a>
             </div>
           </div>
@@ -91,7 +91,7 @@ const MySVG = () => {
                 Dolorem laborum distinctio neque veniam assumenda corporis
               </p>
               <a to="/farmer/log-in" className="primary-btn">
-                Learn more
+                Find Blog
               </a>
             </div>
           </div>
