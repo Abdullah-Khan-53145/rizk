@@ -1,35 +1,39 @@
 import React, { useEffect } from "react";
-import FarmerHero from "../Components/Blogs";
 import { connect } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { setColorAPI } from "../actions";
 import Hero from "../Components/Hero";
 import Services from "../Components/Services";
 import Blogs from "../Components/Blogs";
 function Home({ setColor }) {
+  const location = useLocation();
   useEffect(() => {
     setColor(0);
     window.scrollTo(0, 0);
+  }, [location]);
+  useEffect(() => {
+    setColor(0);
   }, []);
   const info = [
     {
-      title_head: "adipisicing elit1",
-      title: " ipsum, sit <br /> st, weerd",
+      title_head: "Recipe#1",
+      title: "Green Enchiladas <br /> with Homem...",
       description:
-        "Lorem ipsum dolor sit, amet con- -sectetur adipisicing elit.Dolorem laborum distinctio neque veniam assumenda Soris",
+        "These Green Enchiladas are filled with chicken, cheese, and a delicious homemade tomatillo sauce. They are easy to make and perfect for a family dinner.",
       img: "/imgs/blog-1.png",
     },
     {
-      title_head: "adipisicing elit2",
-      title: " ipsum, sit <br /> st, weerd",
+      title_head: "Recipe#2",
+      title: " Grilled Chicken  <br /> Salad Bowl w...",
       description:
-        "   Lorem ipsum dolor sit, amet con- -sectetur adipisicing elit.Dolorem laborum distinctio neque veniam assumenda Soris",
+        "This Grilled Chicken Salad Bowl with Creamy Avocado Dressing is a perfect lunch or light dinner option that is packed with nutritious ingredients and bursting with flavor.",
       img: "/imgs/blog-2.png",
     },
     {
-      title_head: "adipisicing elit3",
-      title: " ipsum, sit <br /> st, weerd",
+      title_head: "Recipe#3",
+      title: "Avocado and <br /> Potato Breakf...",
       description:
-        "Lorem ipsum dolor sit, amet con- -sectetur adipisicing elit.Dolorem laborum distinctio neque veniam assumenda Soris",
+        "This hearty breakfast hash combines creamy avocado, spicy chilli, crispy potatoes, and perfectly cooked eggs for a delicious and satisfying start to your day.",
       img: "/imgs/blog-3.png",
     },
   ];

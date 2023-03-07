@@ -6,10 +6,10 @@ import { setColorAPI } from "../actions";
 import { Link } from "react-router-dom";
 function CostomerSection({ color, setColor }) {
   const services = [
-    "lorem, ipsum",
-    "lorem, ipsum",
-    "lorem, ipsum",
-    "lorem, ipsum",
+    "Global Variety",
+    "Beginner Friendly",
+    "Fun Recipes",
+    "Authentic Cuisine",
   ];
 
   return (
@@ -19,13 +19,14 @@ function CostomerSection({ color, setColor }) {
         <Fade bottom>
           <div className="info">
             <div className="heading">
-              <h1>Lorem</h1>
-              <h2>ipsum dolor</h2>
+              <h1>Explore.</h1>
+              <h2>Taste. Share.</h2>
             </div>
             <p>
-              Lorem ipsum dolor sit, amet con- sectetur adipisicing elit.
-              Dolorem laborum distinctio neque veniam assumenda corporis
-              laudantium quod doloremque sunt a.
+              We believe cooking is a journey of discovery, where you can
+              explore cultures and ingredients, and share experiences with
+              others. Join us on a global culinary adventure, one dish at a
+              time.
             </p>
             <Link to="/about" className="primary-btn">
               Learn more

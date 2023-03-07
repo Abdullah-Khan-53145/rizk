@@ -37,13 +37,9 @@ function Footer() {
                 <h2></h2>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                dolor eum rem laudantium ipsum unde aspernatur ipsam quas,
-                veniam repellat numquam placeat? Repellat minus quae quo iure,
-                sapiente repellendus reprehenderit. Sunt, quod ex. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Quas eos
-                perferendis quos laborum, dolorem, vel accusantium omnis
-                delectus autem quasi similique officiis!
+                {location.pathname === "/about"
+                  ? "At our website, we are passionate about bringing the world's cuisines to your kitchen. Our mission is to inspire and empower home cooks to explore global flavors and expand their culinary horizons. We believe that food is a powerful way to connect with different cultures and create meaningful experiences, and we are committed to making international cooking accessible, enjoyable, and delicious for everyone."
+                  : " Our blog is run by food enthusiasts who share a love for cooking and exploring new flavors. We offer a variety of recipes, cooking tips, and product reviews, and aim to inspire you to get creative in the kitchen. We promote sustainable and ethical food practices, and love to showcase local and regional cuisine."}
               </p>
               <div className="button__farmer">
                 <button onClick={handleClick} className="primary-btn">

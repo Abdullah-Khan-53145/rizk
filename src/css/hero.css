@@ -29,8 +29,8 @@
   gap: 2rem;
 }
 .hero_child h1 {
-  font-size: 6rem;
-  width: 80%;
+  font-size: 5.5rem;
+  width: 100%;
   color: #fff;
 }
 @media (max-width: 756px) {

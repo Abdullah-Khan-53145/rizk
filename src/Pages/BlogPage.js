@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { useLocation } from "react-router-dom";
 import { useParams, Link } from "react-router-dom";
 import {
   doc,
@@ -21,6 +21,7 @@ import BlogCard from "../Components/BlogCard";
 import Reply from "../Components/Reply";
 const blogs = require("./blogs.json");
 const Post = () => {
+  const location = useLocation();
   const { id } = useParams();
   const [blog, setBlog] = useState("");
   const [relatedBlogs, setRelatedBlogs] = useState([]);
@@ -97,11 +98,13 @@ const Post = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     getRelatedBlogs();
     getComment();
     getBlog();
   }, [id]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <>
@@ -148,7 +151,27 @@ const Post = () => {
                     <img src={blog.img} />
                   </div>
                   <p>{blog.description}</p>
-
+                  <br />
+                  <h2>Ingredients</h2>
+                  <ul>
+                    {blog &&
+                      blog.Ingredients.map((ing) => (
+                        <li style={{ listStyle: "disc", marginLeft: "1rem" }}>
+                          {ing}
+                        </li>
+                      ))}
+                  </ul>
+                  <br />
+                  <h2>Instructions</h2>
+                  <ul>
+                    {blog &&
+                      blog.Instructions.map((ing) => (
+                        <li style={{ listStyle: "disc", marginLeft: "1rem" }}>
+                          {ing}
+                        </li>
+                      ))}
+                  </ul>
+                  <p>Enjoy your {blog.subTitle}</p>
                   <div className="comments" style={{ background: colors[id] }}>
                     <h2>Comments</h2>
                     {cmts.length !== 0 ? (

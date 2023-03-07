@@ -13,7 +13,7 @@ function Hero() {
       <div className="hero_child child">
         <Fade bottom>
           <h1>
-            Lorem ipsum, sit <br /> amet consec
+            Satisfy Your Wanderlust <br /> Bite by Bite
           </h1>
           <a href="#farmer" className="primary-btn">
             Explore Blogs

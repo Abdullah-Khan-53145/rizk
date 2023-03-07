@@ -43,7 +43,6 @@
 
 .login__container {
   display: flex;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   justify-content: center;

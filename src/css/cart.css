@@ -230,7 +230,6 @@
   justify-content: flex-end;
 }
 .cart_total_bill .total_bill {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;

@@ -1,16 +1,18 @@
 import React, { useEffect } from "react";
 import "../css/about.css";
+import { useLocation } from "react-router-dom";
 import { Fade } from "react-reveal";
 function About() {
   const services = [
-    "lorem, ipsum",
-    "lorem, ipsum",
-    "lorem, ipsum",
-    "lorem, ipsum",
+    "Global Variety",
+    "Beginner Friendly",
+    "Fun Recipes",
+    "Authentic Cuisine",
   ];
+  const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [location]);
   return (
     <div>
       <div className="user__page__main main">
@@ -24,8 +26,8 @@ function About() {
       <div className="about_us_body ">
         <div className="services_about_us child">
           <div className="text">
-            <h2>Lorem</h2>
-            <h3>Ipsum, sit</h3>
+            <h2>Explore.</h2>
+            <h3>Taste. Share.</h3>
           </div>
           <div className="services">
             {services.map((service, index) => (

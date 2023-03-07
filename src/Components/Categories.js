@@ -8,8 +8,11 @@ const MySVG = () => {
       <div className="info child">
         <h1>Categories</h1>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-          laborum distinctio neque veniam assumenda corporis
+          At our website, we offer a diverse range of recipes spanning
+          breakfast, main courses, and desserts, all sourced from different
+          parts of the world. Whether you're looking to start your day with a
+          delicious breakfast or impress your guests with an exotic main course,
+          we've got you covered.
         </p>
         <div className="scroll">
           <svg
@@ -55,13 +58,14 @@ const MySVG = () => {
               <img src="/imgs/cat-1.jpg" alt="" />
             </div>
             <div className="info">
-              <h1>ipsum, sit</h1>
+              <h1>Our Breakfast</h1>
               <p>
-                Lorem ipsum dolor sit, amet con- -sectetur adipisicing elit.
-                Dolorem laborum distinctio neque veniam assumenda corporis
+                Our breakfast recipes range from hearty and comforting classics
+                to light and energizing options, all with a global twist to
+                start your day right.
               </p>
               <a to="/farmer/log-in" className="primary-btn">
-                Find Blog
+                Find Blogs
               </a>
             </div>
           </div>
@@ -70,13 +74,14 @@ const MySVG = () => {
               <img src="/imgs/cat-2.jpg" alt="" />
             </div>
             <div className="info">
-              <h1>ipsum, sit</h1>
+              <h1>Our Deserts</h1>
               <p>
-                Lorem ipsum dolor sit, amet con- -sectetur adipisicing elit.
-                Dolorem laborum distinctio neque veniam assumenda corporis
+                From decadent cakes to refreshing fruit-based treats, our
+                dessert recipes will satisfy any sweet tooth and add a touch of
+                international flair to your table.
               </p>
               <a to="/farmer/log-in" className="primary-btn">
-                Find Blog
+                Find Blogs
               </a>
             </div>
           </div>
@@ -85,13 +90,14 @@ const MySVG = () => {
               <img src="/imgs/cat-3.jpg" alt="" />
             </div>
             <div className="info">
-              <h1>ipsum, sit</h1>
+              <h1>Our Mains</h1>
               <p>
-                Lorem ipsum dolor sit, amet con- -sectetur adipisicing elit.
-                Dolorem laborum distinctio neque veniam assumenda corporis
+                Our main course recipes showcase a diverse range of
+                international flavors, from comforting stews to exotic curries
+                and everything in between.
               </p>
               <a to="/farmer/log-in" className="primary-btn">
-                Find Blog
+                Find Blogs
               </a>
             </div>
           </div>

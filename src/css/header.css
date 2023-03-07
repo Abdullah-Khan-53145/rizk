@@ -32,7 +32,7 @@
 }
 @media (max-width: 756px) {
   .mid,
-.rigth {
+  .rigth {
     width: 33.3333%;
   }
 }
@@ -186,17 +186,6 @@
     display: block;
     width: 4rem;
     height: 4rem;
-  }
-}
-
-@-webkit-keyframes dropdown {
-  0% {
-    opacity: 0;
-    transform: translate(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0%);
   }
 }
 

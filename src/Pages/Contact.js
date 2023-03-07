@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Fade } from "react-reveal";
+import { useLocation } from "react-router-dom";
 import "../css/contact.css";
 function Contact() {
   const [name, setName] = useState("");
@@ -10,6 +11,7 @@ function Contact() {
     b: false,
     c: false,
   });
+  const location = useLocation();
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -21,7 +23,7 @@ function Contact() {
   };
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [location]);
   return (
     <div>
       <div className="user__page__main main">
@@ -37,8 +39,9 @@ function Contact() {
           <div className="contact_text_info">
             <h2>Send us message</h2>
             <p>
-              Lorem, ipsum dolor sit amet con secLorem, ipsum dolor sit amet
-              cons ecLorem, ipsum dolor sit a
+              We would love to hear from you! Whether you have a recipe request,
+              a cooking question, or just want to say hello, don't hesitate to
+              contact us.
             </p>
             <div className="info_card_contact">
               <svg
@@ -156,7 +159,7 @@ function Contact() {
           <div className="questions">
             <div className="question_card">
               <div className="question">
-                <p>Lorem, ipsum dolor sit amet consec?</p>
+                <p>What kind of recipes can I find on this website?</p>
                 <svg
                   onClick={() => setOpen({ ...isOpen, a: !isOpen.a })}
                   style={{
@@ -182,16 +185,18 @@ function Contact() {
                 style={{ height: isOpen.a ? "8.5rem" : "0" }}
               >
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate sed illum esse architecto tempore explicabo
-                  praesentium culpa impedit. Voluptates laborum consequuntur
-                  quasi?
+                  Our website features a wide range of recipes from different
+                  parts of the world, including breakfast, main courses, and
+                  desserts.
                 </p>
               </div>
             </div>
             <div className="question_card">
               <div className="question">
-                <p>Lorem, ipsum dolor sit amet consec?</p>
+                <p>
+                  Are the recipes authentic, and will I be able to find the
+                  ingredients easily?
+                </p>
                 <svg
                   onClick={() => setOpen({ ...isOpen, b: !isOpen.b })}
                   style={{
@@ -217,16 +222,17 @@ function Contact() {
                 style={{ height: isOpen.b ? "8.5rem" : "0" }}
               >
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate sed illum esse architecto tempore explicabo
-                  praesentium culpa impedit. Voluptates laborum consequuntur
-                  quasi?
+                  Our recipes are sourced from authentic sources and offer
+                  practical ingredient substitutes for hard-to-find items.
                 </p>
               </div>
             </div>
             <div className="question_card">
               <div className="question">
-                <p>Lorem, ipsum dolor sit amet consec?</p>
+                <p>
+                  Is there a community aspect to the website, and can I share my
+                  own recipes and cooking tips?
+                </p>
                 <svg
                   onClick={() => setOpen({ ...isOpen, c: !isOpen.c })}
                   style={{
@@ -252,10 +258,9 @@ function Contact() {
                 style={{ height: isOpen.c ? "8.5rem" : "0" }}
               >
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate sed illum esse architecto tempore explicabo
-                  praesentium culpa impedit. Voluptates laborum consequuntur
-                  quasi?
+                  Yes, our community aspect includes the ability to share
+                  recipes, cooking tips, and connect with other food
+                  enthusiasts.
                 </p>
               </div>
             </div>

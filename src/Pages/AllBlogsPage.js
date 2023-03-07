@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { setColorAPI } from "../actions";
 import { Fade } from "react-reveal";
 import Product from "../Components/BlogCard.js";
@@ -11,11 +12,13 @@ function UserPage() {
   const [search, setSearch] = useState("");
   const [fil, setfil] = useState(3);
   const filters = ["filter1", "filter2", "filter3", "filter4"];
-
+  const location = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
     setProducts(blogposts.blogs);
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <div className="user__page__main main">
